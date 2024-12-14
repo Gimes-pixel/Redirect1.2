@@ -11,6 +11,7 @@
 
       // Validate the input (basic check to ensure it's not empty)
       if (url && url.trim() !== "") {
+        // Open a new tab with about:blank
         var win = window.open('about:blank', '_blank');
         
         win.document.body.style.margin = '0';
@@ -46,9 +47,11 @@
 <body>
   <h1>Open URL in Blank Tab</h1>
   <p>Enter a URL below to open it in a new tab:</p>
+
   <!-- Input field for the user to enter a URL -->
   <input type="text" id="urlInput" placeholder="Enter URL here" style="width: 80%; padding: 10px; margin-bottom: 10px;">
+  
+  <!-- Button that triggers the opening of the URL -->
   <button onclick="openInNewTabWithURL()">Open URL</button>
 </body>
 </html>
-
