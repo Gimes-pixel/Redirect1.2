@@ -6,8 +6,8 @@
   <title>Open URL in Blank Tab</title>
   <script>
     function openInNewTabWithURL() {
-      // Prompt user to enter a URL
-      var url = prompt("Enter the URL you want to open:");
+      // Get the URL from the input field
+      var url = document.getElementById("urlInput").value;
 
       // Validate the input (basic check to ensure it's not empty)
       if (url && url.trim() !== "") {
@@ -45,6 +45,10 @@
 </head>
 <body>
   <h1>Open URL in Blank Tab</h1>
+  <p>Enter a URL below to open it in a new tab:</p>
+  <!-- Input field for the user to enter a URL -->
+  <input type="text" id="urlInput" placeholder="Enter URL here" style="width: 80%; padding: 10px; margin-bottom: 10px;">
   <button onclick="openInNewTabWithURL()">Open URL</button>
 </body>
 </html>
+
