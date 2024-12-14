@@ -7,16 +7,16 @@ function openInNewTab(url) {
   win.document.body.style.margin = '0';
   win.document.body.style.height = '100vh';
 
-  // Add Google Docs favicon
+  // Add Google Docs favicon to the new tab
   var icon = win.document.createElement('link');
   icon.rel = "shortcut icon";
   icon.href = "https://ssl.gstatic.com/docs/doclist/images/mediatype/icon_1_document_256.png"; // Google Docs favicon URL
   icon.type = "image/png";
   win.document.head.appendChild(icon);
 
-  // Set the title of the new tab
+  // Set the title of the new tab to "Google Docs"
   var title = win.document.createElement('title');
-  title.innerText = "Google Docs"; // Set title for the new tab
+  title.innerText = "Google Docs"; // Title text
   win.document.head.appendChild(title);
 
   // Create an iframe to load the provided URL
@@ -27,6 +27,8 @@ function openInNewTab(url) {
   iframe.style.margin = '0';
   iframe.id = 'content';
   iframe.src = url; // Set the iframe source to the input URL
+
+  // Append the iframe to the body after the title and icon are set
   win.document.body.appendChild(iframe);
 }
 
